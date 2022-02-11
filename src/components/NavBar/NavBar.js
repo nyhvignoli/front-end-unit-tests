@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Nav } from "./styles";
 
 const NavBar = ({ title }) => {
-  const [navColor, setNavColor] = useState('black')
+  const [navColor, setNavColor] = useState('#000000')
 
   const handleNavColor = () => {
-    if (navColor === 'black') {
-      setNavColor('blue')
+    if (navColor === '#000000') {
+      setNavColor('#6A5ACD')
     } else {
-      setNavColor('black')
+      setNavColor('#000000')
     }
   }
 
