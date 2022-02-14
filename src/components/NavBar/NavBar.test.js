@@ -20,7 +20,7 @@ describe("NavBar", () => {
   })
 
   /* Style */
-  it("should render NavBar black background color", () => {
+  it("should render NavBar with black background color", () => {
     render(<NavBar />)
     const navBar = screen.getByRole('navigation')
 
