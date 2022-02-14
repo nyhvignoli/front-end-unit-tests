@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import Counter from "./Counter"
 
 describe("Counter", () => {
@@ -16,5 +17,29 @@ describe("Counter", () => {
 
     expect(plusButton).toBeInTheDocument()
     expect(plusButton).not.toBeDisabled()
+  })
+
+  /* User Interaction / Events */
+  it("should increase the counter value by clicking on plus button", () => {
+    render(<Counter />)
+    const minusButton = screen.getByRole('button', { name: '-' })
+    const counter = screen.getByText('0')
+    const plusButton = screen.getByRole('button', { name: '+' })
+
+    expect(minusButton).toBeDisabled()
+    expect(plusButton).not.toBeDisabled()
+
+    userEvent.click(plusButton)
+
+    expect(counter).toHaveTextContent('1')
+    expect(minusButton).not.toBeDisabled()
+
+    userEvent.click(plusButton)
+
+    expect(counter).toHaveTextContent('2')
+
+    userEvent.dblClick(plusButton)
+
+    expect(counter).toHaveTextContent('4')
   })
 })
