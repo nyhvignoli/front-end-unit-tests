@@ -17,6 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "npm test -- --coverage --watchAll",
+    "lint": "npx prettier --c .",
+    "fix": "npx prettier --write .",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

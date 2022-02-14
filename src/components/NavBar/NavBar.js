@@ -11,9 +11,7 @@ const NavBar = ({ title }) => {
         onMouseLeave={() => setShowExtraContent(false)}
       >
         {title || 'Hover me!'}
-        {showExtraContent &&
-          <span>extra content</span>
-      }
+        {showExtraContent && <span>extra content</span>}
       </h1>
     </Nav>
   )

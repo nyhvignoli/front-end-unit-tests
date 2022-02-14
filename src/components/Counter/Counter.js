@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { Wrapper } from "./styles";
+import { useState } from 'react'
+import { Wrapper } from './styles'
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   const increase = () => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   const decrease = () => {
-    setCount(count - 1);
-  };
+    setCount(count - 1)
+  }
 
   return (
     <Wrapper>
@@ -20,7 +20,7 @@ const Counter = () => {
       <span>{count}</span>
       <button onClick={increase}>+</button>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Counter;
+export default Counter

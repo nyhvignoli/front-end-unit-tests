@@ -1,10 +1,10 @@
-import { render, screen } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
-import Counter from "./Counter"
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import Counter from './Counter'
 
-describe("Counter", () => {
+describe('Counter', () => {
   /* Rendering */
-  it("should render Counter component with all the elements", () => {
+  it('should render Counter component with all the elements', () => {
     render(<Counter />)
     const minusButton = screen.getByRole('button', { name: '-' })
     const counter = screen.getByText('0')
@@ -20,7 +20,7 @@ describe("Counter", () => {
   })
 
   /* User Interaction / Events */
-  it("should increase the counter value by clicking on plus button", () => {
+  it('should increase the counter value by clicking on plus button', () => {
     render(<Counter />)
     const minusButton = screen.getByRole('button', { name: '-' })
     const counter = screen.getByText('0')
@@ -43,7 +43,7 @@ describe("Counter", () => {
     expect(counter).toHaveTextContent('4')
   })
 
-  it("should decrease the counter value by clicking on minus button", () => {
+  it('should decrease the counter value by clicking on minus button', () => {
     render(<Counter />)
     const minusButton = screen.getByRole('button', { name: '-' })
     const counter = screen.getByText('0')

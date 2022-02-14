@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Nav = styled.nav`
   width: 100%;
@@ -24,6 +24,6 @@ export const Nav = styled.nav`
     top: 30px;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 1px 1px 1px #CDCDCD;
+    box-shadow: 1px 1px 1px #cdcdcd;
   }
-`;
+`
