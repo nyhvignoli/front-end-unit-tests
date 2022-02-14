@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import NavBar from "./NavBar"
 
 describe("NavBar", () => {
@@ -18,25 +19,35 @@ describe("NavBar", () => {
     expect(navBar).toHaveTextContent(/my custom title/i)
   })
 
-  /* User Interaction / Events */
-  it("should change the NavBar background color", () => {
-    render(<NavBar title='My custom title'/>)
+  /* Style */
+  it("should render NavBar black background color", () => {
+    render(<NavBar />)
     const navBar = screen.getByRole('navigation')
 
     expect(navBar).toHaveStyle({
-      backgroundColor: '#000000' // default color
+      backgroundColor: '#000'
     })
+  })
 
-    fireEvent.click(navBar)
+  /* User Interaction / Events */
+  it("should show extra content on hover the NavBar title", () => {
+    render(<NavBar />)
+    /* use getBy* to check if an element is PRESENT in the DOM */
+    const navBarTitle = screen.getByText(/hover me/i)
+  
+    expect(navBarTitle).toBeInTheDocument()
+    /* use queryBy* to check if an element is NOT PRESENT in the DOM */
+    /* extra content is hidden by default */
+    expect(screen.queryByText(/extra content/i)).not.toBeInTheDocument()
+    
+    userEvent.hover(navBarTitle)
+    /* when hovering over the navBarTitle
+      we expect the extra content to be visible */
+    expect(screen.getByText(/extra content/i)).toBeInTheDocument()
 
-    expect(navBar).toHaveStyle({
-      backgroundColor: '#6A5ACD' // the color should change after click
-    })
-
-    fireEvent.click(navBar)
-
-    expect(navBar).toHaveStyle({
-      backgroundColor: '#000000' // the color should go back to initial state
-    })
+    userEvent.unhover(navBarTitle)
+    /* when unhovering out of the navBarTitle 
+      we expect the extra content to be hidden again */
+    expect(screen.queryByText(/extra content/i)).not.toBeInTheDocument()
   })
 })
