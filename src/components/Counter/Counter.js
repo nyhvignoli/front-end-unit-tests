@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Wrapper } from "./styles";
 
-const Content = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const increase = () => {
@@ -23,4 +23,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Counter;
