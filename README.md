@@ -3,7 +3,7 @@
 
 <a id="pt-readme"></a>
 ### Português | [English](#en-readme)
-Laboratório do curso grátis Introdução à Testes no Front-end
+Laboratório do curso grátis Introdução à Testes no Front-end.</br>
 Esse projeto foi desenvolvido com [Create React App](https://github.com/facebook/create-react-app).
 
 <a name="pt-menu"></a>
@@ -71,7 +71,7 @@ Formata o código para seguir o padrão de formatação configurado no arquivo `
 
 <a id="en-readme"></a>
 ### [Português](#pt-readme) | English
-Lab developed for Getting Started With Front-end Unit Tests course.
+Lab developed for Getting Started With Front-end Unit Tests course.</br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 <a name="menu"></a>
