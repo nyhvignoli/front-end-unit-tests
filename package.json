@@ -17,6 +17,7 @@
     "build": "react-scripts build",
     "test": "jest",
     "test:coverage": "npm test -- --coverage --watchAll",
+    "reinstall": "rm -r node_modules && npm install",
     "lint": "npx prettier --c .",
     "fix": "npx prettier --write .",
     "eject": "react-scripts eject"
