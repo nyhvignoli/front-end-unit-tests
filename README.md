@@ -31,6 +31,8 @@ Para instalar as dependências necessárias para rodar o projeto.
 
 - `main`: Possui todos os arquivos do projeto, com exceção dos arquivos de testes.
 - `unit-tests`: Possui todos os arquivos do projeto + arquivos de testes.
+- `manual-setup`: Possui as configurações do `jest` para projetos React que NÃO foram criados pelo template CRA. Ao dar checkout nessa branch você precisa rodar o comando `npm run reinstall`, isso irá deletar a pasta `node_modules` e reinstalar as dependências.\
+*PS: Você vai precisar rodar o `npm run reinstall` sempre que entrar e sair da branch `manual-setup`.*
 - Caso queira praticar o que vimos na aula, você pode criar uma branch apartir da branch `main` com o comando `git checkout -b meu-nome/unit-tests`.</br>
   Prontinho, agora é só começar a desenvolver seus testes!
 
@@ -107,6 +109,8 @@ To install all the necessary dependencies to run the project.
 
 - `main`: It contains all the project files, excluding the test files.
 - `unit-tests`: It contains all the project files + test files.
+- `manual-setup`: It contains `jest` settings for React projects which were NOT created using CRA template. When you do the checkout on this branch, you will need to run `npm run reinstall`, this will remove the `node_modules` folder and reinstall the dependencies.\
+*PS: You will need to run `npm run reinstall` everytime you switch between `manual-setup` and other branches.*
 - If you want to practice what you've learned in the lesson, you may create a branch based on the `main` branch by runing `git checkout -b my-name/unit-tests`.</br>
   That's it! You're all set to begin the development of your unit tests!
 
